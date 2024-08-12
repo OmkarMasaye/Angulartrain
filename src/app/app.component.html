@@ -1,0 +1,31 @@
+<h1>Welcome to home</h1>
+ <!-- <h3>Name: {{name}}</h3>   
+<input type="text" [(ngModel)]="name" [placeholder]="text">
+<p>Your name is : {{name}}</p>
+<h2>Number:{{phoneno|countryCode:"USA"}}</h2>
+<div>
+  @for(user of users;track user.name){
+    @if(user.salary>10000){
+      <h3>Name:{{user.name| uppercase}},Status:{{user.isSingle?"Single":"Coder"}},Salary:{{user.salary|currency:"EUR"}}</h3>
+    }
+    @else{
+      <h3>Name:{{user.name}},Status:{{user.isSingle?"Single":"Coder"}},Salary:hidden</h3>
+    }
+  }
+</div>
+<hr/>
+<div *ngFor="let user of users">
+   <h3 *ngIf="user.salary>10000;else elseblock">Name:{{user.name}},Status:{{user.isSingle?"Single":"Coder"}},Salary:{{user.salary}}</h3>
+   <ng-template #elseblock>
+      <h3>Name:{{user.name}},Status:{{user.isSingle?"Single":"Coder"}},Salary:hidden</h3>
+   </ng-template>
+</div> -->
+
+<!-- <app-user-profile *ngFor="let u of users" [username]="u.name" [isSingle]="u.isSingle" [salary]="u.salary"
+(myevent)="receivedData($event)"></app-user-profile>
+<button (click)="clear()">Clear users</button> -->
+
+<app-jokes></app-jokes>
+
+
+ 
