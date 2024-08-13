@@ -6,11 +6,14 @@ import { CommonModule } from '@angular/common';
 import { User } from '../model/user';
 import { CountryCodePipe } from './pipes/country-code.pipe';
 import { JokesComponent } from './components/jokes/jokes.component';
+import { AComponent } from './components/a/a.component';
+import { B1Component } from './components/b1/b1.component';
+import { B2Component } from './components/b2/b2.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,UserProfileComponent,FormsModule,CommonModule,CountryCodePipe,JokesComponent],
+  imports: [RouterOutlet,UserProfileComponent,FormsModule,CommonModule,CountryCodePipe,JokesComponent,AComponent,B1Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

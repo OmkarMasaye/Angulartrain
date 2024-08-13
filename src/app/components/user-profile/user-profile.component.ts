@@ -1,4 +1,4 @@
-import { booleanAttribute, Component, ElementRef, EventEmitter, Input, numberAttribute, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
+import { booleanAttribute, Component, ElementRef, EventEmitter, input, Input, numberAttribute, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { User } from '../../../model/user';
 import { HighlightDirective } from '../../directives/highlight.directive';
 
@@ -15,13 +15,15 @@ function formatName(value:String){
 })
 export class UserProfileComponent implements OnInit{
    
-   @Input({alias:"username"}) name="";
+   name=input("",{
+   alias:"username",
+   })
    @Input({transform:booleanAttribute}) isSingle!:boolean;
    @Input({transform:numberAttribute}) salary!:number;
 
    @Output() myevent= new EventEmitter<User>()
    sendData(){
-    this.myevent.emit({name:this.name,newSalary:28000})
+    this.myevent.emit({name:this.name(),newSalary:28000})
   }
   @ViewChild("myheading")heading?:ElementRef
   constructor(){
@@ -38,7 +40,7 @@ export class UserProfileComponent implements OnInit{
 
   }
   ngOnInit(){
-    console.log("OnInit called",this.name)
+    console.log("OnInit called",this.name())
     console.log("Oninit",this.heading?.nativeElement.textContent)
    }
 
